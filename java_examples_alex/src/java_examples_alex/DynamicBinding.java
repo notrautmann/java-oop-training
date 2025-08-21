@@ -1,5 +1,8 @@
 package java_examples_alex;
 
+/**
+ * Demonstrates a superclass used for dynamic binding examples.
+ */
 class Superklasse {
     void zeigeInstanz() {
         System.out.println("Instanzmethode der Superklasse");
@@ -10,6 +13,9 @@ class Superklasse {
     }
 }
 
+/**
+ * Subclass overriding methods to illustrate dynamic dispatch and method hiding.
+ */
 class Subklasse extends Superklasse {
     @Override
     void zeigeInstanz() {

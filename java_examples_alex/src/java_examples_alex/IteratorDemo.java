@@ -1,6 +1,12 @@
 package java_examples_alex;
 
+/**
+ * Demo for the Iterator pattern over a simple bookshelf.
+ */
 public class IteratorDemo {
+	/**
+	 * Executes the demo.
+	 */
 	public static void run() {
         Buecherregal regal = new Buecherregal(3);
         regal.buchHinzufuegen(new Buch("Design Patterns"));

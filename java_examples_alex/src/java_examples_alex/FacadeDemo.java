@@ -1,8 +1,14 @@
 package java_examples_alex;
 
+/**
+ * Demo class showcasing the Facade design pattern by orchestrating a simple home theater setup.
+ */
 public class FacadeDemo {
 	
 	
+	/**
+	 * Starts the facade demo by orchestrating the home theater components.
+	 */
 	public static void start() {
 		
 		class DVDPlayer {

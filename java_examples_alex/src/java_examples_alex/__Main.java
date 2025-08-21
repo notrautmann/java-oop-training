@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * Entry point class for example runs in the java_examples_alex package.
+ * Contains a main method that triggers the Fibu example execution.
+ */
 public class __Main {
 /*
 	private static final int ANZ_MA = 3;

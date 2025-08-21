@@ -1,6 +1,12 @@
 package java_examples_alex;
 
+/**
+ * Demo class showcasing the Composite pattern with a simple file system structure.
+ */
 public class CompositeDemo {
+	/**
+	 * Executes the composite demo by building a small folder structure and displaying it.
+	 */
 	public static void run() {
 		Datei datei1 = new Datei("Lebenslauf.pdf");
         Datei datei2 = new Datei("Bild.png");

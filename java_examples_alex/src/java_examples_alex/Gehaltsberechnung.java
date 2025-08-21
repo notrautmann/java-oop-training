@@ -4,12 +4,19 @@ package java_examples_alex;
 
 import java.util.Date;
 
+/**
+ * Basisklasse für Mitarbeiter mit Personalnummer, Name und Eintrittsdatum.
+ * Definiert die Schnittstelle zur Berechnung des monatlichen Bruttogehalts.
+ */
 abstract class Mitarbeiter
 {
   int persnr;
   String name;
   Date eintritt;
 
+  /**
+   * Default constructor.
+   */
   public Mitarbeiter()
   {
   }
@@ -20,6 +27,9 @@ abstract class Mitarbeiter
   public abstract double berechneMonatsBrutto();
 }
 
+/**
+ * Konkrete Mitarbeiter-Art mit Vergütung auf Basis von Stundenlohn und -anzahl.
+ */
 class Arbeiter
 extends Mitarbeiter
 {
@@ -37,12 +47,19 @@ public Arbeiter(double stundenlohn, double anzahlstunden) {
 }
 
 @Override 
+  /**
+   * Berechnet das monatliche Bruttogehalt.
+   * @return das Bruttogehalt für den Monat
+   */
 public double berechneMonatsBrutto()
   {
     return stundenlohn*anzahlstunden;
   }
 }
 
+/**
+ * Konkrete Mitarbeiter-Art mit festem Grundgehalt und variablem Bonus.
+ */
 class Angestellter
 extends Mitarbeiter
 {
@@ -59,6 +76,10 @@ extends Mitarbeiter
 double grundgehalt;
   double bonus;
 
+  /**
+   * Berechnet das monatliche Bruttogehalt.
+   * @return das Bruttogehalt für den Monat
+   */
   public double berechneMonatsBrutto()
   {
     return grundgehalt+           
@@ -66,6 +87,9 @@ double grundgehalt;
   }
 }
 
+/**
+ * Konkrete Mitarbeiter-Art mit fixem Gehalt und umsatzabhängiger Provision.
+ */
 class Manager
 extends Mitarbeiter
 {
@@ -87,6 +111,10 @@ double fixgehalt;
   double provision;
   double umsatz;
 
+  /**
+   * Berechnet das monatliche Bruttogehalt.
+   * @return das Bruttogehalt für den Monat
+   */
   public double berechneMonatsBrutto()
   {
     return fixgehalt+          

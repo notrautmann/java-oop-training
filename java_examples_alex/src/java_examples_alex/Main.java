@@ -12,8 +12,15 @@ import strategy_examples.StrategyDemo;
 import templatemethod_example.TemplatemethodDemo;
 import visitor_example.VisitorDemo;
 
+/**
+ * Entry point class for running various example demos in the java_examples_alex package.
+ */
 public class Main {
 
+	/**
+	 * Application entry point.
+	 * @param args the command line arguments
+	 */
 	public static void main(String[] args) {
 		// CompositeDemo.run();
 		// DecoratorDemo.run();
