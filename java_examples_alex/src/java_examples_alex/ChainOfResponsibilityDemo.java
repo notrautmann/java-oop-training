@@ -1,10 +1,20 @@
 package java_examples_alex;
 
+/**
+ * Demo class showcasing the Chain of Responsibility pattern with multiple support levels.
+ */
 public class ChainOfResponsibilityDemo {
+	/**
+	 * Runs the Chain of Responsibility demo by constructing the handler chain and processing sample requests.
+	 */
 	public static void run() {
 		
 		class Level1Support extends SupportHandler {
 		    @Override
+		    /**
+		     * Processes the given request at this support level or forwards it to the next handler.
+		     * @param anfrage the request description
+		     */
 		    public void bearbeiteAnfrage(String anfrage) {
 		        if (anfrage.contains("Passwort") || anfrage.contains("Allgemein")) {
 		            System.out.println("Level 1 Support bearbeitet: " + anfrage);
@@ -16,6 +26,10 @@ public class ChainOfResponsibilityDemo {
 		
 		class Level2Support extends SupportHandler {
 		    @Override
+		    /**
+		     * Processes the given request at this support level or forwards it to the next handler.
+		     * @param anfrage the request description
+		     */
 		    public void bearbeiteAnfrage(String anfrage) {
 		        if (anfrage.contains("Technik") || anfrage.contains("Fehler")) {
 		            System.out.println("Level 2 Support bearbeitet: " + anfrage);
@@ -27,6 +41,10 @@ public class ChainOfResponsibilityDemo {
 		
 		class Level3Support extends SupportHandler {
 		    @Override
+		    /**
+		     * Processes the given request at this support level or forwards it to the next handler.
+		     * @param anfrage the request description
+		     */
 		    public void bearbeiteAnfrage(String anfrage) {
 		        if (anfrage.contains("Sicherheit") || anfrage.contains("Datenleck")) {
 		            System.out.println("Level 3 Support bearbeitet: " + anfrage);

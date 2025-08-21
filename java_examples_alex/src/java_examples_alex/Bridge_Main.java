@@ -10,10 +10,15 @@ import java.util.Random;
 import java.util.Set;
 
 /**
- * 
+ * Demo entry class for the Bridge pattern example, connecting {@link Fernbedienung}
+ * abstractions with {@link Geraet} implementations.
  */
 public class Bridge_Main {
 
+	/**
+	 * Demo entry point showcasing the Bridge pattern wiring between Fernbedienung and Geraet.
+	 * @param args the command-line arguments
+	 */
 	public static void ___main(String[] args) {
 		
 		
@@ -64,6 +69,10 @@ public class Bridge_Main {
 		
 		class EinfacheFernbedienung extends Fernbedienung {
 
+		    /**
+		     * Creates a simple remote control bound to the given device.
+		     * @param geraet the device implementation to control
+		     */
 		    public EinfacheFernbedienung(Geraet geraet) {
 		        super(geraet);
 		    }

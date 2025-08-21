@@ -1,7 +1,13 @@
 package java_examples_alex;
 
+/**
+ * Demo for the Command pattern that defines commands and executes them via a simple invoker.
+ */
 public class CommandDemo {
 	
+	/**
+	 * Runs the Command pattern demo.
+	 */
 	public static void run() {
 	
 	// Receiver-Klassen (z. B. Licht, Radio)
@@ -28,6 +34,10 @@ public class CommandDemo {
 	 class LichtAnCommand implements Command {
 	    private Licht licht;
 
+	    /**
+	     * Creates the command to turn the light on.
+	     * @param licht the receiver
+	     */
 	    public LichtAnCommand(Licht licht) {
 	        this.licht = licht;
 	    }
@@ -40,6 +50,10 @@ public class CommandDemo {
 	 class LichtAusCommand implements Command {
 	    private Licht licht;
 
+	    /**
+	     * Creates the command to turn the light off.
+	     * @param licht the receiver
+	     */
 	    public LichtAusCommand(Licht licht) {
 	        this.licht = licht;
 	    }
@@ -52,6 +66,10 @@ public class CommandDemo {
 	 class RadioAnCommand implements Command {
 	    private Radio radio;
 
+	    /**
+	     * Creates the command to turn the radio on.
+	     * @param radio the receiver
+	     */
 	    public RadioAnCommand(Radio radio) {
 	        this.radio = radio;
 	    }
@@ -64,6 +82,10 @@ public class CommandDemo {
 	 class RadioAusCommand implements Command {
 	    private Radio radio;
 
+	    /**
+	     * Creates the command to turn the radio off.
+	     * @param radio the receiver
+	     */
 	    public RadioAusCommand(Radio radio) {
 	        this.radio = radio;
 	    }
@@ -76,10 +98,17 @@ public class CommandDemo {
 	 class Fernbedienung {
 	    private Command slot;
 
+	    /**
+	     * Sets the command in the single slot.
+	     * @param command the command to execute when the button is pressed
+	     */
 	    public void setCommand(Command command) {
 	        this.slot = command;
 	    }
 
+	    /**
+	     * Triggers the currently set command if available.
+	     */
 	    public void tasteGedrueckt() {
 	        if (slot != null) {
 	            slot.ausfuehren();

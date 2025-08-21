@@ -2,7 +2,13 @@ package java_examples_alex;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * Demo for the Proxy design pattern showing access control via a proxy.
+ */
 public class ProxyDemo {
+	/**
+	 * Executes the proxy demo showcasing access control via a proxy.
+	 */
 	public static void run() {
 		
 		interface Internet {
